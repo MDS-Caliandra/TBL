@@ -1,13 +1,17 @@
-from django.conf.urls import url
-
+from django.conf.urls import url, include
 from . import views
 
 app_name = 'peer_review'
 
-urlpatterns = [
+peer_review_patterns = [
     url(
-        r'^peer',
-        views.peer,
+        r'^$',
+        views.ListPeerReviewView.as_view(),
         name='peer'
     ),
+]
+
+urlpatterns = [
+    # /profile/<discipline.slug>/groups/...
+    url(r'^peer', include(peer_review_patterns)),
 ]

@@ -1,8 +1,8 @@
 from django import forms
-from .models import peer_review
+from .models import PeerReview
 
-class PeerReviewForm(froms.ModelForm):
+class PeerReviewForm(forms.ModelForm):
 
     class Meta:
-        model = peer_review
+        model = PeerReview
         fields = ['title', 'feedback', 'score']
