@@ -29,6 +29,8 @@ EXTERNAL_APPS = [
     'widget_tweaks',
     'markdown_deux',
     'pagedown',
+    'django_nose',
+    'aloe_django',
 ]
 
 PRODUCTION_APPS = DJANGO_APPS + TBL_APPS + EXTERNAL_APPS
