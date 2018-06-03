@@ -37,7 +37,7 @@ class PeerReview(models.Model):
         the object.
         """
 
-        return '{0}'.format(self.username_received)
+        return '{0}: {1} - {2}'.format(self.username_received, self. feedback, self.score)
 
     class Meta:
         verbose_name = _('PeerReview')
